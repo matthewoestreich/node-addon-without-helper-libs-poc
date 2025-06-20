@@ -19,7 +19,7 @@
 	"scripts": {
 		"install": "node-gyp-build",
 		"prepublishOnly": "npm run build",
-		"prebuildify": "prebuildify --napi",
+		"prebuildify": "prebuildify",
 		"configure": "node-gyp configure",
 		"build": "node-gyp configure build",
 		"build:bear": "bear --output build/compile_commands.json -- node-gyp configure build",

@@ -11,7 +11,6 @@
 	"files": [
 		"prebuilds/",
 		"build/Release/*.node",
-		"src/",
 		"binding.gyp",
 		"index.js",
 		"index.d.ts"

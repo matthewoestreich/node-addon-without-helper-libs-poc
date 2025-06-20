@@ -23,10 +23,16 @@ jobs:
       - name: Build prebuilds
         run: npm run prebuildify
 
+      - name: Get Prebuild Name
+        id: prebuild
+        run: |
+          echo "PREBUILD_FOLDER_NAME=$(node -p \"require('os').platform() + '-' + require('os').arch()\")" >> $GITHUB_OUTPUT
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: prebuilds/**/*
+          name: ${{ steps.prebuild.outputs.PREBUILD_FOLDER_NAME }}
+          path: prebuilds/${{ steps.prebuild.outputs.PREBUILD_FOLDER_NAME }}
 
   publish:
     needs: build

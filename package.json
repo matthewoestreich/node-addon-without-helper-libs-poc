@@ -10,7 +10,7 @@
 	},
 	"files": [
 		"prebuilds/",
-		"build/Release/",
+		"build/Release/*.node",
 		"binding.gyp",
 		"index.js",
 		"index.d.ts"

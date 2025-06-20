@@ -17,9 +17,10 @@
 	],
 	"scripts": {
 		"prepublishOnly": "npm run build",
-		"prebuildify": "prebuildify --napi --strip",
+		"prebuildify": "prebuildify --napi",
 		"configure": "node-gyp configure",
-		"build": "bear --output build/compile_commands.json -- node-gyp build",
+		"build": "node-gyp build",
+		"build:bear": "bear --output build/compile_commands.json -- node-gyp build",
 		"clean": "node-gyp clean"
 	},
 	"repository": {

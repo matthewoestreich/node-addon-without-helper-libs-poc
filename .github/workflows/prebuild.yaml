@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build prebuilds
-        run: npx prebuildify --napi
+        run: npm run prebuildify
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

@@ -1,0 +1,22 @@
+{
+  "name": "addon-without-helper-libs-poc",
+  "version": "1.0.0",
+  "description": "Create a Node.js addon in C++ without helper libraries - just native Node.js C++ libraries",
+  "types": "index.d.ts",
+  "main": "index.js",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "configure": "node-gyp configure",
+    "build": "node-gyp build",
+    "build:bear": "bear --output build/compile_commands.json -- node-gyp build",
+    "clean": "node-gyp clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "dependencies": {
+    "node-addon-api": "^8.4.0",
+    "node-gyp": "^11.2.0"
+  }
+}

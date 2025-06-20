@@ -25,6 +25,7 @@ jobs:
 
       - name: Get Prebuild Name
         id: prebuild
+        shell: bash
         run: |
           PREBUILD_FOLDER_NAME=$(node -p "require('os').platform() + '-' + require('os').arch()")
           echo "PREBUILD_FOLDER_NAME=$PREBUILD_FOLDER_NAME" >> $GITHUB_OUTPUT

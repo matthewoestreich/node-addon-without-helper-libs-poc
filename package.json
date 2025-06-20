@@ -13,7 +13,8 @@
 		"build/Release/*.node",
 		"binding.gyp",
 		"index.js",
-		"index.d.ts"
+		"index.d.ts",
+		"src/"
 	],
 	"scripts": {
 		"install": "node-gyp-build",

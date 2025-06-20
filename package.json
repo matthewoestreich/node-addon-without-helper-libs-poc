@@ -1,32 +1,39 @@
 {
-  "name": "node-addon-without-helper-libs-poc",
-  "description": "Create a Node.js addon in C++ without helper libraries - just native Node.js C++ libraries",
-  "version": "1.0.2",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "files": [
-    "build/",
-    "binding.gyp",
-    "src/",
-    "index.js",
-    "index.d.ts"
-  ],
-  "scripts": {
-    "prepublishOnly": "npm run build",
-    "install": "node-gyp rebuild",
-    "configure": "node-gyp configure",
-    "build": "node-gyp build",
-    "build:bear": "bear --output build/compile_commands.json -- node-gyp build",
-    "clean": "node-gyp clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/matthewoestreich/node-addon-without-helper-libs-poc.git"
-  },
-  "author": "Matt Oestreich",
-  "license": "MIT",
-  "dependencies": {
-    "node-addon-api": "^8.4.0",
-    "node-gyp": "^11.2.0"
-  }
+	"name": "node-addon-without-helper-libs-poc",
+	"description": "Create a Node.js addon in C++ without helper libraries - just native Node.js C++ libraries",
+	"version": "1.0.2",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"binary": {
+		"module_name": "node-addon-without-helper-libs-poc",
+		"module_path": "prebuilds/{platform}-{arch}/"
+	},
+	"files": [
+		"prebuilds/",
+		"build/Release/",
+		"binding.gyp",
+		"index.js",
+		"index.d.ts"
+	],
+	"scripts": {
+		"prepublishOnly": "npm run build",
+		"prebuildify": "prebuildify --napi --strip",
+		"configure": "node-gyp configure",
+		"build": "bear --output build/compile_commands.json -- node-gyp build",
+		"clean": "node-gyp clean"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/matthewoestreich/node-addon-without-helper-libs-poc.git"
+	},
+	"author": "Matt Oestreich",
+	"license": "MIT",
+	"dependencies": {
+		"node-addon-api": "^8.4.0",
+		"node-gyp": "^11.2.0",
+		"node-gyp-build": "^4.8.4"
+	},
+	"devDependencies": {
+		"prebuildify": "^6.0.1"
+	}
 }

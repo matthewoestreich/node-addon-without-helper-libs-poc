@@ -1,3 +1,1 @@
-const addon = require("./build/Release/node-addon-without-helper-libs-poc.node");
-
-module.exports = addon;
+module.exports = require('node-gyp-build')(__dirname);

@@ -26,8 +26,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: prebuilds-${{ matrix.os }}
-          path: prebuilds/
+          name: prebuilds
+          path: prebuilds/**/*
 
   publish:
     needs: build
@@ -45,7 +45,8 @@ jobs:
       - name: Download all prebuilds
         uses: actions/download-artifact@v4
         with:
-          path: prebuilds
+          name: prebuilds
+          path: prebuilds/
 
       - name: Publish to npm
         run: npm publish

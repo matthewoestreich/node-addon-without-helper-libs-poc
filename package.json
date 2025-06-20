@@ -1,7 +1,7 @@
 {
 	"name": "node-addon-without-helper-libs-poc",
 	"description": "Create a Node.js addon in C++ without helper libraries - just native Node.js C++ libraries",
-	"version": "1.0.13",
+	"version": "1.0.14",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"binary": {

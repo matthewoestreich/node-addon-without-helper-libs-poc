@@ -11,13 +11,13 @@
 	"files": [
 		"prebuilds/",
 		"build/Release/*.node",
+		"src/",
 		"binding.gyp",
 		"index.js",
 		"index.d.ts"
 	],
 	"scripts": {
 		"install": "node-gyp-build",
-		"install:old": "echo \"Skipping build on install\"",
 		"prepublishOnly": "npm run build",
 		"prebuildify": "prebuildify --napi",
 		"configure": "node-gyp configure",

@@ -16,7 +16,8 @@
 		"index.d.ts"
 	],
 	"scripts": {
-		"install": "echo \"Skipping build on install\"",
+		"install": "node-gyp-build",
+		"install:old": "echo \"Skipping build on install\"",
 		"prepublishOnly": "npm run build",
 		"prebuildify": "prebuildify --napi",
 		"configure": "node-gyp configure",

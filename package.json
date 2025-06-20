@@ -5,12 +5,14 @@
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
-    "build/Release/node-addon-without-helper-libs-poc.node",
+    "build/",
     "binding.gyp",
+    "src/",
     "index.js",
     "index.d.ts"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "install": "node-gyp rebuild",
     "configure": "node-gyp configure",
     "build": "node-gyp build",

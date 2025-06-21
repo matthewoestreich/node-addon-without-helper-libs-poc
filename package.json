@@ -4,6 +4,10 @@
 	"version": "1.0.21",
 	"main": "index.js",
 	"types": "index.d.ts",
+	"exports": {
+		"import": "./index.mjs",
+		"require": "./index.cjs"
+	},
 	"binary": {
 		"module_name": "node-addon-without-helper-libs-poc",
 		"module_path": "prebuilds/{platform}-{arch}/"

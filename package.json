@@ -15,7 +15,8 @@
 	"files": [
 		"prebuilds/",
 		"binding.gyp",
-		"index.js",
+		"index.cjs",
+		"index.mjs",
 		"index.d.ts"
 	],
 	"scripts": {

@@ -10,15 +10,13 @@
 	},
 	"files": [
 		"prebuilds/",
-		"build/Release/*.node",
 		"binding.gyp",
 		"index.js",
-		"index.d.ts",
-		"src/"
+		"index.d.ts"
 	],
 	"scripts": {
 		"install": "echo \"skip\"",
-		"prebuildify": "prebuildify",
+		"prebuildify": "prebuildify --napi",
 		"configure": "node-gyp configure",
 		"build": "node-gyp configure build",
 		"build:bear": "bear --output build/compile_commands.json -- node-gyp configure build",

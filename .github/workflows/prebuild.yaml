@@ -6,19 +6,11 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest, darwin-x64]
         architecture: [x64]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Force x64 Node.js on macOS
-        if: matrix.os == 'macos-latest'
-        run: |
-          arch -x86_64 /bin/bash -c '
-            curl -fsSL https://nodejs.org/dist/v24.2.0/node-v24.2.0-darwin-x64.tar.gz | tar -xz
-            echo "$PWD/node-v24.2.0-darwin-x64/bin" >> $GITHUB_PATH
-          '
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

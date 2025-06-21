@@ -6,7 +6,7 @@
 	"types": "index.d.ts",
 	"binary": {
 		"module_name": "node-addon-without-helper-libs-poc",
-		"module_path": "prebuilds/{platform}-{arch}/"
+		"module_path": "node_modules/node-addon-without-helper-libs-poc/prebuilds/{platform}-{arch}/"
 	},
 	"files": [
 		"prebuilds/",

@@ -17,7 +17,7 @@
 		"src/"
 	],
 	"scripts": {
-		"install": "node-gyp-build",
+		"install": "echo \"skip\"",
 		"prebuildify": "prebuildify",
 		"configure": "node-gyp configure",
 		"build": "node-gyp configure build",
